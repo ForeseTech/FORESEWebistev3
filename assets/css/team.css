@@ -77,12 +77,22 @@
     max-width: 100% !important;
     min-width: 100% !important;
     flex-basis: 100% !important;
+    /* margin: 2rem !important; */
+  }
+
+  .at-user {
+    top: 85% !important;
+    margin-bottom: 1rem;
+  }
+
+  .at-user__line {
+    margin-bottom: 10rem;
   }
 }
 
 .at-user {
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 0;
   width: 100%;
   transform: translate(0, -50%);
@@ -113,6 +123,7 @@
   color: #6f808a;
   font-family: 'Roboto', sans-serif;
   font-size: 1.5rem;
+  font-weight: 400;
   line-height: 2.375rem;
 }
 
@@ -120,44 +131,12 @@
   color: #070707;
   font-family: 'Roboto', sans-serif;
   font-size: 1rem;
-  padding: 1rem;
-}
-
-/**
-.at-social {
-  margin: 0 0 -18px;
-  opacity: 0;
-  text-align: center;
-  justify-content: center;
-  transition: margin 0.2s ease, opacity 0.2s ease;
-}
-.at-social__item {
+  padding: 0.5rem;
+  line-height: 1rem;
+  padding-bottom: 6rem;
+  font-weight: 300;
   display: inline-block;
-  margin: 0 10px;
-
-  text-align: center;
-  justify-content: center;
 }
-.at-social__item a {
-  display: block;
-  text-align: center;
-  justify-content: center;
-}
-.at-social__item svg {
-  fill: #515F65;
-  display: block;
-  text-align: center;
-  justify-content: center;
-  height: 18px;
-  transition: fill 0.2s ease;
-}
-.at-social__item svg:hover {
-  fill: #788D96;
-
-  text-align: center;
-  justify-content: center;
-}
-*/
 
 .at-grid {
   display: flex;
@@ -220,6 +199,7 @@
   min-width: 11.1111111111%;
   flex-basis: 11.1111111111%;
 }
+
 .teamcontainer {
   width: 100%;
   box-sizing: border-box;
