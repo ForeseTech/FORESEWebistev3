@@ -3819,7 +3819,31 @@ ol {
   }
 }
 
-.logoContainer .avatar {
+.logo-container {
+  display: grid;
+  place-items: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .logo-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .logo-container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .logo-container {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+.logo-container .logo {
   position: relative;
   display: flex;
   align-items: center;
@@ -3833,16 +3857,14 @@ ol {
   box-shadow: inset 0 0 1px 1px rgba(0, 0, 0, 0.015);
 }
 
-.logoContainer .avatar img {
+.logo-container .logo img {
   height: 80%;
   width: 80%;
   z-index: 2;
-  /* Optionally add a drop shadow to the main image  */
-  /* to make it feel "lifted"  */
   filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.12));
 }
 
-.logoContainer .avatar .background {
+.logo-container .logo .background {
   position: absolute;
   z-index: 1;
   pointer-events: none;
@@ -3852,21 +3874,6 @@ ol {
   height: 100%;
   transform: scale(2);
   filter: blur(13px) opacity(0.2);
-}
-
-/* Irrelevant styling */
-.logoComp {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.logoContainer {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  grid-gap: 20px;
-  place-items: center;
 }
 
 @font-face {
