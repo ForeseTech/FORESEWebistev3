@@ -905,7 +905,7 @@ ol {
   padding-bottom: 100px;
   z-index: 2;
   text-align: center;
-  background-image: url('../images/hero/hero1.png');
+  background-image: url('../images/hero/hero.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -2516,7 +2516,7 @@ ol {
   }
 }
 
-.single-featuer {
+.single-feature {
   padding: 35px;
   border-radius: 8px;
   -webkit-box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.048);
@@ -2530,7 +2530,7 @@ ol {
   z-index: 2;
 }
 
-.single-featuer .shape {
+.single-feature .shape {
   position: absolute;
   left: -30px;
   top: -17px;
@@ -2540,7 +2540,7 @@ ol {
   transition: all 0.4s ease;
 }
 
-.single-featuer .shape2 {
+.single-feature .shape2 {
   position: absolute;
   right: -30px;
   bottom: -17px;
@@ -2550,20 +2550,20 @@ ol {
   transition: all 0.4s ease;
 }
 
-.single-featuer:hover .shape {
+.single-feature:hover .shape {
   left: 0;
 }
 
-.single-featuer:hover .shape2 {
+.single-feature:hover .shape2 {
   right: 0;
 }
 
-.single-featuer:hover {
+.single-feature:hover {
   -webkit-box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.13);
   box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.13);
 }
 
-.single-featuer .serial {
+.single-feature .serial {
   font-size: 50px;
   font-weight: 700;
   color: #f4f4f4;
@@ -2573,7 +2573,7 @@ ol {
   z-index: -1;
 }
 
-.single-featuer .service-icon {
+.single-feature .service-icon {
   height: 65px;
   width: 65px;
   line-height: 65px;
@@ -2592,24 +2592,24 @@ ol {
   background-repeat: no-repeat;
 }
 
-.single-featuer:hover .service-icon {
+.single-feature:hover .service-icon {
   background-color: #f20487;
   -webkit-box-shadow: 0px 10px 30px #f204873d;
   box-shadow: 0px 10px 30px #f204873d;
 }
 
-.single-featuer h3 {
+.single-feature h3 {
   font-size: 22px;
   font-weight: 600;
   margin-bottom: 20px;
   margin-top: 30px;
 }
 
-.single-featuer p {
+.single-feature p {
   font-size: 16px;
 }
 
-.single-featuer a {
+.single-feature a {
   color: #3813c2;
   margin-top: 40px;
   display: inline-block;
@@ -2617,34 +2617,34 @@ ol {
   font-size: 15px;
 }
 
-.single-featuer a i {
+.single-feature a i {
   font-size: 22px;
   margin-left: 12px;
   position: relative;
   top: 3px;
 }
 
-.single-featuer a:hover {
+.single-feature a:hover {
   letter-spacing: 1px;
 }
 
-.single-featuer.two .service-icon {
+.single-feature.two .service-icon {
   background-color: #f20487;
   -webkit-box-shadow: 0px 10px 30px rgba(253, 114, 59, 0.25);
   box-shadow: 0px 10px 30px rgba(253, 114, 59, 0.25);
 }
 
-.single-featuer.two a {
+.single-feature.two a {
   color: #f20487;
 }
 
-.single-featuer.three .service-icon {
+.single-feature.three .service-icon {
   background-color: #ffa842;
   -webkit-box-shadow: 0px 10px 30px rgba(255, 168, 66, 0.26);
   box-shadow: 0px 10px 30px rgba(255, 168, 66, 0.26);
 }
 
-.single-featuer.three a {
+.single-feature.three a {
   color: #ffa842;
 }
 
@@ -3146,15 +3146,17 @@ ol {
   line-height: 35px;
   text-align: center;
   display: block;
-  border-radius: 4px;
+  border-radius: 0.2rem;
   color: #fff;
-  background-color: #3813c2;
-  font-size: 14px;
+  font-size: 2rem;
 }
 
-.footer .single-footer.f-about .social li a:hover {
-  background-color: #f20487;
-  color: #fff;
+.footer .single-footer.f-about .social li:nth-of-type(1) a {
+  background-color: #0e76a8;
+}
+
+.footer .single-footer.f-about .social li:nth-of-type(2) a {
+  background-color: #171515;
 }
 
 .footer .single-footer.f-link li {
