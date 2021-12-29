@@ -2088,9 +2088,9 @@ ol {
 ========================================*/
 .hero-area {
   position: relative;
-  padding: 200px 0 150px 0;
-  padding-bottom: 240px;
-  background-image: url('../images/hero/undraw_working_re_ddwy.svg');
+  padding-top: 80px;
+  padding-bottom: 360px;
+  background-image: url('../images/hero/showcase.svg');
   background-position: right;
   background-repeat: no-repeat;
 }
