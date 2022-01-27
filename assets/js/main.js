@@ -6,29 +6,29 @@
   };
 
   function fadeout() {
-    document.querySelector('.preloader').style.opacity = '0';
-    document.querySelector('.preloader').style.display = 'none';
+    document.querySelector(".preloader").style.opacity = "0";
+    document.querySelector(".preloader").style.display = "none";
   }
 
   /*=====================================
     Sticky
     ======================================= */
   window.onscroll = function () {
-    var header_navbar = document.querySelector('.navbar-area');
+    var header_navbar = document.querySelector(".navbar-area");
     var sticky = header_navbar.offsetTop;
     if (window.pageYOffset > sticky) {
-      header_navbar.classList.add('sticky');
+      header_navbar.classList.add("sticky");
     } else {
-      header_navbar.classList.remove('sticky');
+      header_navbar.classList.remove("sticky");
     }
-    var backToTo = document.querySelector('.scroll-top');
+    var backToTo = document.querySelector(".scroll-top");
     if (
       document.body.scrollTop > 50 ||
       document.documentElement.scrollTop > 50
     ) {
-      backToTo.style.display = 'flex';
+      backToTo.style.display = "flex";
     } else {
-      backToTo.style.display = 'none';
+      backToTo.style.display = "none";
     }
   };
 
@@ -36,33 +36,33 @@
   new WOW().init();
 
   //===== mobile-menu-btn
-  let navbarToggler = document.querySelector('.mobile-menu-btn');
-  navbarToggler.addEventListener('click', function () {
-    navbarToggler.classList.toggle('active');
+  let navbarToggler = document.querySelector(".mobile-menu-btn");
+  navbarToggler.addEventListener("click", function () {
+    navbarToggler.classList.toggle("active");
   });
 })();
 
 var curpage = 1;
 var sliding = false;
 var click = true;
-var left = document.getElementById('left');
-var right = document.getElementById('right');
-var pagePrefix = 'slide';
+var left = document.getElementById("left");
+var right = document.getElementById("right");
+var pagePrefix = "slide";
 var pageShift = 500;
-var transitionPrefix = 'circle';
+var transitionPrefix = "circle";
 var svg = true;
 
 function leftSlide() {
   if (click) {
     if (curpage == 1) curpage = 5;
-    console.log('woek');
+    console.log("woek");
     sliding = true;
     curpage--;
     svg = true;
     click = false;
     for (k = 1; k <= 4; k++) {
       var a1 = document.getElementById(pagePrefix + k);
-      a1.className += ' tran';
+      a1.className += " tran";
     }
     setTimeout(() => {
       move();
@@ -70,7 +70,7 @@ function leftSlide() {
     setTimeout(() => {
       for (k = 1; k <= 4; k++) {
         var a1 = document.getElementById(pagePrefix + k);
-        a1.classList.remove('tran');
+        a1.classList.remove("tran");
       }
     }, 1400);
   }
@@ -79,14 +79,14 @@ function leftSlide() {
 function rightSlide() {
   if (click) {
     if (curpage == 4) curpage = 0;
-    console.log('woek');
+    console.log("woek");
     sliding = true;
     curpage++;
     svg = false;
     click = false;
     for (k = 1; k <= 4; k++) {
       var a1 = document.getElementById(pagePrefix + k);
-      a1.className += ' tran';
+      a1.className += " tran";
     }
     setTimeout(() => {
       move();
@@ -94,7 +94,7 @@ function rightSlide() {
     setTimeout(() => {
       for (k = 1; k <= 4; k++) {
         var a1 = document.getElementById(pagePrefix + k);
-        a1.classList.remove('tran');
+        a1.classList.remove("tran");
       }
     }, 1400);
   }
@@ -106,26 +106,26 @@ function move() {
     if (svg) {
       for (j = 1; j <= 9; j++) {
         var c = document.getElementById(transitionPrefix + j);
-        c.classList.remove('steap');
-        c.setAttribute('class', transitionPrefix + j + ' streak');
-        console.log('streak');
+        c.classList.remove("steap");
+        c.setAttribute("class", transitionPrefix + j + " streak");
+        console.log("streak");
       }
     } else {
       for (j = 10; j <= 18; j++) {
         var c = document.getElementById(transitionPrefix + j);
-        c.classList.remove('steap');
-        c.setAttribute('class', transitionPrefix + j + ' streak');
-        console.log('streak');
+        c.classList.remove("steap");
+        c.setAttribute("class", transitionPrefix + j + " streak");
+        console.log("streak");
       }
     }
     setTimeout(() => {
       for (i = 1; i <= 4; i++) {
         if (i == curpage) {
           var a = document.getElementById(pagePrefix + i);
-          a.className += ' up1';
+          a.className += " up1";
         } else {
           var b = document.getElementById(pagePrefix + i);
-          b.classList.remove('up1');
+          b.classList.remove("up1");
         }
       }
       sliding = true;
@@ -138,14 +138,14 @@ function move() {
       if (svg) {
         for (j = 1; j <= 9; j++) {
           var c = document.getElementById(transitionPrefix + j);
-          c.classList.remove('streak');
-          c.setAttribute('class', transitionPrefix + j + ' steap');
+          c.classList.remove("streak");
+          c.setAttribute("class", transitionPrefix + j + " steap");
         }
       } else {
         for (j = 10; j <= 18; j++) {
           var c = document.getElementById(transitionPrefix + j);
-          c.classList.remove('streak');
-          c.setAttribute('class', transitionPrefix + j + ' steap');
+          c.classList.remove("streak");
+          c.setAttribute("class", transitionPrefix + j + " steap");
         }
         sliding = true;
       }
@@ -154,4 +154,34 @@ function move() {
       click = true;
     }, 1700);
   }
+}
+
+// This is "probably" IE9 compatible but will need some fallbacks for IE8
+// - (event listeners, forEach loop)
+
+// wait for the entire page to finish loading
+window.addEventListener("load", function () {
+  // setTimeout to simulate the delay from a real page load
+  setTimeout(lazyLoad, 1000);
+});
+
+function lazyLoad() {
+  var card_images = document.querySelectorAll(".card-image");
+
+  // loop over each card image
+  card_images.forEach(function (card_image) {
+    var image_url = card_image.getAttribute("data-image-full");
+    var content_image = card_image.querySelector("img");
+
+    // change the src of the content image to load the new high res photo
+    content_image.src = image_url;
+
+    // listen for load event when the new photo is finished loading
+    content_image.addEventListener("load", function () {
+      // swap out the visible background image with the new fully downloaded photo
+      card_image.style.backgroundImage = "url(" + image_url + ")";
+      // add a class to remove the blur filter to smoothly transition the image change
+      card_image.className = card_image.className + " is-loaded";
+    });
+  });
 }
